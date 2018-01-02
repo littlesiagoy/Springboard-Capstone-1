@@ -103,6 +103,5 @@ final_poverty_dataset.to_excel('test.xlsx')
 final_cardio_dataset.to_excel('test2.xlsx')
 
 # Import the master dataset.
-final_data = pd.read_excel('master_dataset.xlsx')
+#final_data = pd.read_excel('master_dataset.xlsx')
 
-final_poverty_dataset
