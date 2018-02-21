@@ -98,10 +98,12 @@ final_cardio_dataset.replace('District of Columbia', 'D.C.', regex=True, inplace
 
 final_cardio_dataset.drop('FIPS', axis=1, inplace=True)
 
+# Rename the final poverty dataset columns.
+final_poverty_dataset.columns = ['STATE', 'Total (1000s)', 'Number (1000s)', 'Percent', 'Year']
+
 # Export the two datasets to excel and combine them in excel.
 final_poverty_dataset.to_excel('test.xlsx')
 final_cardio_dataset.to_excel('test2.xlsx')
 
-# Import the master dataset.
-#final_data = pd.read_excel('master_dataset.xlsx')
+# There is some weird bug where reseting the column index in the cardio dataset still results in a multiindex dataframe.
 
